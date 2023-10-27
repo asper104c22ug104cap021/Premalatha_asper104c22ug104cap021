@@ -1,0 +1,37 @@
+def sort_students(student_list):
+    sorted_students = sorted(student_list, key=lambda student: student.cgpa, reverse=True)
+    return sorted_students
+You can use this function by passing a list of student objects as input. Each student object should have attributes: name (string), roll_number (string), and cgpa (float). The function will sort the students based on their CGPA in descending order and return the sorted list.
+
+Here's an example of how to use the function:
+
+python
+Copy code
+class Student:
+    def __init__(self, name, roll_number, cgpa):
+        self.name = name
+        self.roll_number = roll_number
+        self.cgpa = cgpa
+
+# Test with different input lists of students
+students_list = [
+    Student("John", "2021001", 3.9),
+    Student("Jane", "2021002", 3.7),
+    Student("Alice", "2021003", 3.8),
+    Student("Bob", "2021004", 3.6)
+]
+
+sorted_students = sort_students(students_list)
+
+# Print the sorted list of students
+for student in sorted_students:
+    print(f"Name: {student.name}, Roll Number: {student.roll_number}, CGPA: {student.cgpa}")
+Output:
+
+yaml
+Copy code
+Name: John, Roll Number: 2021001, CGPA: 3.9
+Name: Alice, Roll Number: 2021003, CGPA: 3.8
+Name: Jane, Roll Number: 2021002, CGPA: 3.7
+Name: Bob, Roll Number: 2021004, CGPA: 3.6
+In this example, the list of students is sorted based on their CGPA in descending order.

@@ -1,0 +1,24 @@
+def linear_search_product(products, target_product):
+    indices = []
+    for index, product in enumerate(products):
+        if product == target_product:
+            indices.append(index)
+    return indices
+You can use this function by passing the list of products and the target product name as arguments. It will return a list of indices where the target product appears in the original list, or an empty list if the target product is not found.
+
+Example usage:
+
+python
+Copy code
+# Sample list of products
+product_list = ["apple", "banana", "orange", "apple", "grape", "apple"]
+
+# Target product to search for
+target_product = "apple"
+
+# Call the function
+result = linear_search_product(product_list, target_product)
+
+# Print the result
+print(result)  # Output: [0, 3, 5]
+In this example, the target product "apple" appears at indices 0, 3, and 5 in the product_list, so the function returns the list [0, 3, 5].
